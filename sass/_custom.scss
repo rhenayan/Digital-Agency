@@ -1,0 +1,159 @@
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/utilities/';
+@import '../sass/utilities/mixins';
+
+
+
+/* Colors */
+
+$white:    #fff ;
+$black:    #000; 
+$gray-darker: #3B3E43;
+$green: #00A077;
+$light-blue: #57B3FE;
+$light-purple: #8281FF;
+$neon-blue: #36BDFF;
+$purple: #503E9C;
+
+/* Color assignment */
+$primary: $white;
+$secondary: $gray-darker;
+
+
+/* Spacing */
+
+$custom-spacers: (
+    6: $spacer * 3.5,
+    7: $spacer * 4,
+    8: $spacer * 4.5,
+    9: $spacer * 5,
+    10: $spacer * 5.5,
+    11: $spacer * 6,
+    12: $spacer * 10,
+    13: $spacer * 15,
+    14: $spacer * 20,
+    15: $spacer * 25,
+);
+
+/* font-size */
+
+$custom-font-sizes: (
+    h: $font-size-base * 3.815, //heading
+    sh: $font-size-base * 1.25, //section title
+    body: $font-size-base * 1, //body text
+    small: $font-size-base *  0.8, //smaller body text
+    body-2: $font-size-base * 0.712, // footer texts
+);
+
+
+
+$spacers: map-merge($spacers, $custom-spacers);
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+
+
+/* utilities */
+
+$utilities: (
+    'text-color': (
+        property:color,
+        class: text-color,
+        values: (
+            primary: $white,
+            secondary: $gray-darker,
+            'green': $green,
+        )
+    ),
+
+    'bg-color': (
+        property: background-color,
+        class: bg-color,
+        values: (
+            'white': $white,
+        )
+    ),
+
+    "width": (
+        property: width,
+        class: w,
+        responsive: true,
+        values: (
+          25: 25%,
+          50: 50%,
+          75: 75%,
+          100: 100%,
+          auto: auto
+        )
+      ),
+
+    "height": (
+        property: height,
+        class: h,
+        responsive: true,
+        values: (
+          25: 25%,
+          50: 50%,
+          75: 75%,
+          100: 100%,
+          auto: auto,
+          1: 1px,
+          300: 300px,
+          800: 800px,
+        )
+      ),
+
+    "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        null: $border-radius,
+        0: 0,
+        1: $border-radius-sm,
+        2: $border-radius,
+        3: $border-radius-lg,
+        4: .4rem,
+        5: .6rem,
+        6: .8rem,
+        circle: 50%,
+        pill: $border-radius-pill
+      )
+    ),
+
+    "bg-image": (
+      property: background-image,
+      class: bg-img,
+      values: (
+        'hero': url(../../assets/images/background-hero.png),
+        'features': url(../../assets/images/background-features.png),
+        'process': url(../../assets/images/background-process.png),
+        'start':  url(../../assets/images/background-startwithus.png),
+      )
+    )
+
+);
+
+
+
+/*====================CUSTOM COMPONENTS=====================*/
+
+
+
+/* navbar */
+
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$white}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-border-color: $white;
+
+
+/* link style*/
+
+$link-color: $white;
+$link-hover-color: rgba($white, 0.5);
+$link-decoration: none;
+
+
+
+/**IMPORT BOOTSTRAP[custom]**/
+
+@import 'bootstrap-custom';
+

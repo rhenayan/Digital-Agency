@@ -1,0 +1,19 @@
+{
+  "name": "digital-agency",
+  "version": "1.0.0",
+  "description": "agency landing page built using bootstrap v-5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bootstrap",
+    "bootstrap",
+    "v-5sass"
+  ],
+  "author": "rhenayan",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

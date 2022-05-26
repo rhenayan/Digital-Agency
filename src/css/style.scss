@@ -1,0 +1,68 @@
+@import '../../sass/custom';
+@import '../../sass/utilities/mixins';
+@import '../../sass/utilities/button';
+
+
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    height: 100%;
+}
+
+
+/* background color */
+
+.hero,
+.start-with-us,
+.features {
+    @include bg-properties;
+}
+
+
+/* resize brand size */
+.navbar-brand {
+
+    &--logo {
+        transform: scale(0.87);
+
+        @include media-breakpoint-down(sm) {
+            transform: scale(0.75);
+        }
+    }
+}
+
+/* custom nav-link hover effect */
+
+.nav-item {
+    position:relative;
+    text-align:center;
+   
+
+    a {
+        &::after {
+
+            content: '';
+            display:inline-block;
+            width: 10px;
+            height: 5px;
+            position:absolute;
+            bottom: 0;
+            left: 50%;
+            right: 50%;
+            transform:translateX(-50%);
+            border-radius: 5px;
+            opacity: 0;
+            @include bgColor;
+            @include transition;
+
+
+        }
+
+        &:hover:after {
+            width: 100%;
+            opacity: 0.8;
+           
+        }
+
+    }
+}
